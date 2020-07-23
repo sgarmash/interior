@@ -9,6 +9,7 @@
   "author": "Sergey Garmash",
   "license": "ISC",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "browser-sync": "^2.26.5",
     "del": "^5.0.0",
     "gulp": "^4.0.2",

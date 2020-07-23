@@ -1,5 +1,7 @@
 $(function(){
 
-  console.log("DOM ready");
+  $( '.burger' ).on( 'click', function(){
+    $(this).toggleClass( 'active' );
+  });
 
 }());
