@@ -2,17 +2,29 @@
   width: 100%;
   position: absolute;
   left: 0;
-  top: 70px;
-  height: 0;
+  top: 50px;
+  min-height: 0;
+  background-color: $header-bg;
   opacity: 0;
   visibility: hidden;
-  height: 0;
+  transition: min-height, opacity, visibility, .4s ease-in-out;
+  overflow-y: scroll;
+  &.active {
+    min-height: calc(100vh - -50px);
+    opacity: 1;
+    visibility: visible;
+  }
   &-list {
       display: flex;
-      height: 100%;
+      flex-direction: column;
+      padding: 0 15px;
     &--item {
       position: relative;
-      height: 100%;
+      padding: 15px 0;
+      border-bottom: 1px solid $color-white;
+      &:last-of-type {
+        border-bottom: none;
+      }
       a {
         display: inline-flex;
         width: 100%;
@@ -27,35 +39,65 @@
         &:hover {
           color: $hover-color;
         }
-        &:active {
-          color: $hover-color;
-        }
-        &:focus {
-          color: $hover-color;
-        }
       }
     }
     &--sub {
+      height: 0;
       opacity: 0;
       visibility: hidden;
-      height: 0;
+      border-top: 4px solid $hover-color;
+      transition: opacity, visibility, .4s ease-in-out;
+      &.active {
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity, visibility, .4s ease-in-out;
+      }
+      li {
+
+        background: $header-bg;
+        border-bottom: 1px solid #424242;
+        &:last-of-type {
+          border: none;
+        }
+
+      }
     }
   }
   @media screen and ( min-width: 767px ) {
     position: static;
     width: auto;
     height: 100%;
+    background-color: transparent;
     opacity: 1;
     visibility: visible;
+    overflow-y: inherit;
+    &.active {
+      min-height: 100%;
+    }
     &-list {
+      height: 100%;
+      flex-direction: row;
       &--item {
+        height: 100%;
         margin-left: 50px;
+        border: none;
         &:first-of-type {
           margin-left: 0;
         }
       }
       &--sub {
         position: absolute;
+        top: 100%;
+        right: 0;
+        min-width: 190px;
+        border-top: 4px solid $hover-color;
+        li {
+          padding: 15px 0 15px 20px;
+        }
+        a {
+          color: $sub-link-color;
+        }
       }
     }
   }
