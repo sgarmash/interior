@@ -5,9 +5,19 @@ $(function(){
     $('.navigation').toggleClass( 'active' );
   });
 
-  $( '.dropdown' ).on( 'click', function(event){
+  $( '.dropdown-link' ).on( 'click', function(event){
     event.preventDefault();
-    $( this ).find( '.navigation-list--sub' ).toggleClass( 'active' );
+    $( this ).siblings().toggleClass( 'active' );
+  });
+
+  $( '.navigation-list--sub' ).on( 'click', function(event){
+    return true;
+  });
+
+  $(document).on('click', function (e) {
+    if ($(e.target).closest(".dropdown-link").length === 0) {
+      $( '.navigation-list--sub' ).removeClass( 'active' );
+    }
   });
 
 }());

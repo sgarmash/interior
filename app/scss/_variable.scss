@@ -1,7 +1,16 @@
 $header-bg: #222222;
+
+$main-bg: #eeeeee;
 $color-white: white;
+$color-black: #222222;
 $sub-link-color: #e0e0e0;
-$hover-color: #ffae00;
+$hover-color: #ffa000;
+$breadcrumbs-current: $hover-color;
+$breadcrumbs-color: #c5c4c4;
+$article-border: #e0e0e0;
+$sub-border: #424242;
+$footer-bg: $header-bg;
+$footer-color: $main-bg;
 
 $fonts-regular: "Muli-Regular";
 $fonts-bold: "Muli-Bold";

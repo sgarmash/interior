@@ -1,16 +1,16 @@
 .navigation {
-  width: 100%;
   position: absolute;
+  height: 100vh;
+  width: 100%;
   left: 0;
   top: 50px;
-  min-height: 0;
   background-color: $header-bg;
   opacity: 0;
   visibility: hidden;
   transition: min-height, opacity, visibility, .4s ease-in-out;
   overflow-y: scroll;
   &.active {
-    min-height: calc(100vh - -50px);
+    height: 100vh;
     opacity: 1;
     visibility: visible;
   }
@@ -36,6 +36,9 @@
         text-transform: capitalize;
         text-decoration: none;
         transition: color .4s ease-in-out;
+        svg {
+          margin-left: 5px;
+        }
         &:hover {
           color: $hover-color;
         }
@@ -54,9 +57,8 @@
         transition: opacity, visibility, .4s ease-in-out;
       }
       li {
-
         background: $header-bg;
-        border-bottom: 1px solid #424242;
+        border-bottom: 1px solid $sub-border;
         &:last-of-type {
           border: none;
         }
