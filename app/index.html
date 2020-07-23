@@ -4,23 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Test | Landing Page</title>
+  <title>Interior | Page</title>
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 <body>
   <header class="header">
     <div class="container">
+      
       <div class="header-content">
-        <div class="logo">
-          <a href="/"><img src="img/logo.png" alt="logo">
-            <span>Interior Design</span>
-          </a>
+        <div class="header-item">
+          <div class="logo">
+            <a href="/"><img src="img/logo.png" alt="logo">
+              <span>Interior Design</span>
+            </a>
+          </div>
+          <div class="burger" role="button">
+            <span></span>
+          </div>
         </div>
-        <div class="burger" role="button">
-          <span></span>
-        </div>
-        <nav class="navigation">
-                                                     
+        <nav class="navigation">                  
           <ul class="navigation-list">
             <li class="navigation-list--item">
               <a href="#null">
@@ -42,11 +44,13 @@
                 contacts
               </a>
             </li>
-            <li class="navigation-list--item dropdown">
-              <a href="#null" class="dropdown-link">
+            <li class="navigation-list--item">
+              <a href="#null">
                 extra
-                <i class="fas fa-angle-down"></i>
               </a>
+              <span class="navigation-list--arrow" role="button">
+                <i class="fas fa-angle-down"></i>  
+              </span>
               <ul class="navigation-list--sub">
                 <li><a href="#null">404</a></li>
                 <li><a href="#null">coming soon</a></li>
@@ -54,7 +58,6 @@
               </ul>
             </li>
           </ul>
-
         </nav>
       </div>
     </div>

@@ -1,23 +1,14 @@
-$(function(){
-
+$(function(){ 
+  let body = $( 'body' );
   $( '.burger' ).on( 'click', function(){
-    $(this).toggleClass( 'active' );
-    $('.navigation').toggleClass( 'active' );
+    $( this ).toggleClass( 'active' );
+    $( '.navigation' ).slideToggle( 400 ).toggleClass( 'active' );
+    $( 'body' ).toggleClass( 'no-scroll' );
   });
 
-  $( '.dropdown-link' ).on( 'click', function(event){
-    event.preventDefault();
+  $( '.navigation-list--arrow' ).on( 'click', function(event){
+    $( this ).toggleClass( 'active' );
     $( this ).siblings().toggleClass( 'active' );
-  });
-
-  $( '.navigation-list--sub' ).on( 'click', function(event){
-    return true;
-  });
-
-  $(document).on('click', function (e) {
-    if ($(e.target).closest(".dropdown-link").length === 0) {
-      $( '.navigation-list--sub' ).removeClass( 'active' );
-    }
   });
 
 }());

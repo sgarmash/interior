@@ -5,16 +5,35 @@
   left: 0;
   right: 0;
   top: 0;
-  background: $header-bg;
-  z-index: 10;
-  &-content {
+  z-index: 15;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $header-bg;
+    z-index: 10;
+  }
+  &-content {   
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: space-between;
   }
+  &-item {
+    position: relative;    
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+  }
   @media screen and ( min-width: 767px ) {
     height: 70px;
+    &-item {
+      width: auto;
+    }
   }
 }
 
