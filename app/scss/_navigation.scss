@@ -137,8 +137,15 @@
         right: 0;
         min-width: 190px;
         border-top: 4px solid $hover-color;
+        &.active {
+          margin: 0;
+          li {
+            padding: 0 0 0 20px;
+          }
+        }
         li {
-          padding: 15px 0 15px 20px;
+          padding: 0 0 0 20px;
+          height: 40px;
           a {
             color: $sub-link-color;
           }
